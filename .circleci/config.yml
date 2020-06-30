@@ -1,0 +1,11 @@
+version: 2.1
+orbs:
+  docker: circleci/docker@1.2.1
+workflows:
+    build-and-push:
+        - docker/publish:
+            image: $DOCKER_REGISTRY/sendgrid-webhook
+            registry: $DOCKER_REGISTRY
+            docker-password: DOCKER_LOGIN
+            docker-username: DOCKER_PASSWORD
+            tag: $CIRCLE_SHA1
