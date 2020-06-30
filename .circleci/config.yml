@@ -10,4 +10,5 @@ workflows:
             image: $DOCKER_REGISTRY/sendgrid-webhook
             docker-password: DOCKER_PASSWORD
             docker-username: DOCKER_LOGIN
+            registry: $DOCKER_REGISTRY
             tag: $CIRCLE_SHA1
