@@ -7,7 +7,7 @@ workflows:
     build-and-push:
       jobs:
         - docker/publish:
-            image: $DOCKER_REGISTRY/sendgrid-webhook
+            image: sendgrid-webhook
             docker-password: DOCKER_PASSWORD
             docker-username: DOCKER_LOGIN
             registry: $DOCKER_REGISTRY
